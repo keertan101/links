@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links for Posts</title>
+  <style>
+    body {
+      font-family: -apple-system, blinkmacsystemfont, "segoe ui", "roboto", "oxygen",
+        "ubuntu", "cantarell", "fira sans", "droid sans", "helvetica neue",
+        sans-serif;
+      text-align: center;
+      align-items: center;
+    }
+    table {
+      /* background-color: grey; */
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+    .links{
+      /* font-size:0.2em; */
+      width:10%;
+    }
+  </style>
+  <script type="text/javascript" src="./data.js"></script>
+</head>
+
+<body>
+  <h1>All Links of Tracks Posted on <a href="https://www.instagram.com/keertan101">Keertan101</a></h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Post #</th>
+        <th>Pangti</th>
+        <th>Timestamp</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody id="putData">
+    </tbody>
+  </table>
+
+  <script>
+    const tbody = document.getElementById("putData");
+    for (let i = 0; i < DATA.length; i++) {
+      /* <tr>
+          <th>1</th>
+          <td>One</td>
+          <td>੧</td>
+          <td>Ikk</td>
+        </tr> */
+      const pangti = DATA[i][0]
+      const time = DATA[i][1]
+      const link = DATA[i][2]
+
+      const tr = document.createElement('tr')
+      const th = document.createElement('th')
+      const td1 = document.createElement('td')
+      const td2 = document.createElement('td')
+      const td3 = document.createElement('td')
+
+      th.innerText = i + 1 // will automatically become str type 
+      td1.innerText = pangti;
+      td2.innerText = time;
+      td3.innerHTML = `<a target='_blank' class='links' href=${link} > Link to Track</a>`;
+
+      tr.appendChild(th);
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tr.appendChild(td3);
+
+      console.log(tr)
+      tbody.appendChild(tr)
+    }
+  </script>
+</body>
+
+</html>
