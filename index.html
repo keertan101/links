@@ -1,80 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>Links for Posts</title>
   <style>
     body {
-      font-family: -apple-system, blinkmacsystemfont, "segoe ui", "roboto", "oxygen",
-        "ubuntu", "cantarell", "fira sans", "droid sans", "helvetica neue",
+      font-family: -apple-system, blinkmacsystemfont, 'segoe ui', 'roboto', 'oxygen',
+        'ubuntu', 'cantarell', 'fira sans', 'droid sans', 'helvetica neue',
         sans-serif;
       text-align: center;
       align-items: center;
     }
+
     table {
       /* background-color: grey; */
       margin-left: auto;
       margin-right: auto;
-
     }
-    .links{
-      /* font-size:0.2em; */
-      width:10%;
+
+    #ascenOrdescenBtn{
+      margin: 1em;
+    }
+
+    #ascenOrdescenLable{
+      background-color: lightgray;
+      border-radius:1em;
+      padding:0.6em;
+    }
+
+    #submitBtn {
+      margin: 1em;
     }
   </style>
-  <script type="text/javascript" src="./data.js"></script>
+  <script type='text/javascript' src='./data.js'></script>
 </head>
 
 <body>
-  <h1>All Links of Tracks Posted on <a href="https://www.instagram.com/keertan101">Keertan101</a></h1>
+  <h1>All Links of Tracks Posted on <a href='https://www.instagram.com/keertan101'>Keertan101</a></h1>
+
+  <form onsubmit='event.preventDefault();displayData()'>
+    <label for='pickKeertani'>Choose a Keertani:</label>
+    <select id='pickKeertani'>
+      <option value='all'>All</option>
+      <option value='SDO Ji'>Bhai Mohinder Singh Ji SDO</option>
+    </select>
+    <input id='submitBtn' type='submit' value='Submit'>
+  </form>
+
+  <div id='ascenOrdescenBtn'>
+    <label id='ascenOrdescenLable' for='ascenOrdescen'>Ascending</label>
+    <input hidden='true' onclick='toggle_order()' type='checkbox' id='ascenOrdescen'> 
+  </div>
+
   <table>
     <thead>
       <tr>
         <th>Post #</th>
-        <th>Pangti</th>
+        <th>Pangti with Link</th>
         <th>Timestamp</th>
-        <th>Link</th>
+        <th>Keertani</th>
       </tr>
     </thead>
-    <tbody id="putData">
+    <tbody id='putData'>
     </tbody>
   </table>
 
   <script>
-    const tbody = document.getElementById("putData");
-    for (let i = 0; i < DATA.length; i++) {
-      /* <tr>
-          <th>1</th>
-          <td>One</td>
-          <td>੧</td>
-          <td>Ikk</td>
-        </tr> */
-      const pangti = DATA[i][0]
-      const time = DATA[i][1]
-      const link = DATA[i][2]
+    const tbody = document.getElementById('putData');
+    let theOrder = 'ascen'
 
-      const tr = document.createElement('tr')
-      const th = document.createElement('th')
-      const td1 = document.createElement('td')
-      const td2 = document.createElement('td')
-      const td3 = document.createElement('td')
+    function displayData() {
+      tbody.innerHTML = ''; //remove anychildern
+      let theData = theOrder=='ascen'? DATA : [...DATA].reverse()
 
-      th.innerText = i + 1 // will automatically become str type 
-      td1.innerText = pangti;
-      td2.innerText = time;
-      td3.innerHTML = `<a target='_blank' class='links' href=${link} > Link to Track</a>`;
+      const opt = document.getElementById('pickKeertani').value
+      theData = theData.filter((item)=>{
+        if( opt == "all" ){
+          return item
+        }else if( opt == "SDO Ji" && item.keertani == "SDO Ji"){
+          return item
+        }
+      })
+      
 
-      tr.appendChild(th);
-      tr.appendChild(td1);
-      tr.appendChild(td2);
-      tr.appendChild(td3);
+      for (let i = 0; i < theData.length; i++) {
+        const {pangti, time, link, postNum, keertani, img} = theData[i]
 
-      console.log(tr)
-      tbody.appendChild(tr)
+        const tr = document.createElement('tr')
+        const th = document.createElement('th')
+        const td1 = document.createElement('td')
+        const td2 = document.createElement('td')
+        const td3 = document.createElement('td')
+
+        th.innerText = postNum
+        /* td1.innerText = pangti; */
+        td1.innerHTML = `<a target='_blank' href=${link} > ${pangti}</a>`;
+        td2.innerText = time;
+        td3.innerText = keertani;
+
+        tr.appendChild(th);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        /* console.log(tr) */
+        tbody.appendChild(tr)
+      }
     }
+
+    function toggle_order(){
+      const label = document.getElementById('ascenOrdescenLable');
+      if (label.innerText == 'Ascending'){
+        theOrder = 'descen'
+        displayData()
+        label.innerText='Descending'
+      }else if(label.innerText == 'Descending'){
+        theOrder = 'ascen'
+        displayData()
+        label.innerText='Ascending'
+      }
+    }
+
+    displayData()
   </script>
 </body>
 
