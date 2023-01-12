@@ -29,4 +29,11 @@ const DATA = [
     postNum:4,
     keertani:"SDO Ji",
   },
+  {
+    pangti:"ਗੁਰਸਿਖ ਜੋਗੀ ਜਾਗਦੇ ਮਾਇਆ ਅੰਦਰਿ ਕਰਨਿ ਉਦਾਸੀ।",
+    time:"2:09:30",
+    link:"http://sikhsoul.com/golden_khajana_files/mp3/Keertan/Bhai%20Mohinder%20Singh%20SDO/Tau%20kaarann%20saahibaa%20rang%20ratey.mp3",
+    postNum:5,
+    keertani:"SDO Ji",
+  }
 ]
