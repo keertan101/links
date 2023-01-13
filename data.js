@@ -43,5 +43,13 @@ const DATA = [
     postNum:6,
     keertani:"Bhai Jasbir Singh Ji",
   },
+  {
+    pangti:"ਮੋਹਿਨਿਰਗੁਣਅਨਾਥੁਸਰਣੀਆਇਆ ॥",
+    time:"11:40",
+    link:"https://youtu.be/Pm7Dt7RDwhY",
+    postNum:7,
+    keertani:"Bhai Mehar Singh Ji",
+  },
+
 
 ]
