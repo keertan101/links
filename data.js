@@ -57,6 +57,11 @@ const DATA = [
     postNum:8,
     keertani:"SDO Ji",
   },
-
-
+  {
+    pangti:"ਅੰਮ੍ਰਿਤੁਸਦਾਵਰਸਦਾਬੂਝਨਿਬੂਝਣਹਾਰ ॥",
+    time:"6:45",
+    link:"http://sikhsoul.com/golden_khajana_files/mp3/Keertan/Bhai%20Mohinder%20Singh%20SDO/Anmrith%20Sadhaa%20Varasadhaa%20Boojhan%20Boojhanehaar.mp3",
+    postNum:9,
+    keertani:"SDO Ji",
+  },
 ]
