@@ -41,14 +41,13 @@
 <body>
   <h1>All Links of Tracks Posted on <a href='https://www.instagram.com/keertan101'>Keertan101</a></h1>
 
-  <form onsubmit='event.preventDefault();displayData()'>
     <label for='pickKeertani'>Choose a Keertani:</label>
-    <select id='pickKeertani'>
+    <select id='pickKeertani' onchange="displayData()">
       <option value='all'>All</option>
       <option value='SDO Ji'>Bhai Mohinder Singh Ji SDO</option>
+      <option value='Bhai Mehar Singh Ji'>Bhai Mehar Singh Ji</option>
+      <option value='Bhai Jasbir Singh Ji'>Bhai Jasbir Singh Ji</option>
     </select>
-    <input id='submitBtn' type='submit' value='Submit'>
-  </form>
 
   <div id='ascenOrdescenBtn'>
     <label id='ascenOrdescenLable' for='ascenOrdescen'>Ascending</label>
@@ -80,7 +79,7 @@
       theData = theData.filter((item)=>{
         if( opt == "all" ){
           return item
-        }else if( opt == "SDO Ji" && item.keertani == "SDO Ji"){
+        }else if( opt == item.keertani){
           return item
         }
       })
