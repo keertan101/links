@@ -64,4 +64,11 @@ const DATA = [
     postNum:9,
     keertani:"SDO Ji",
   },
+  {
+    pangti:"ਸਾਬਰੁਸਿਦਕਿਸਹੀਦੁਭਰਮਭਉਖੋਵਣਾ।",
+    time:"8:30",
+    link:"http://45.41.235.161/~daasstor/keertan/sdo/yt2_moga/702%20%20%20MGA%20SDO%201664%20%20%20Japat%20Raha%20Tera%20Nao%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2009%201962%20Chd%20%20%20%20%20Old%20Spool%20%20KS%20%2069-nlmUuqCCl3A.m4a",
+    postNum:10,
+    keertani:"SDO Ji",
+  },
 ]
