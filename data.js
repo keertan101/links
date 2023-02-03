@@ -71,4 +71,11 @@ const DATA = [
     postNum:10,
     keertani:"SDO Ji",
   },
+  {
+    pangti:"ਛਡਾਇਲੀਓਮਹਾਬਲੀਤੇਅਪਨੇਚਰਨਪਰਾਤਿ॥",
+    time:"43:55",
+    link:"https://youtu.be/nOtGSg5rSgY",
+    postNum:11,
+    keertani:"SDO Ji",
+  },
 ]
