@@ -78,4 +78,11 @@ const DATA = [
     postNum:11,
     keertani:"SDO Ji",
   },
+  {
+    pangti:"ਮਾਰੇਹਿਸੁਵੇਜਨਹਉਮੈਬਿਖਿਆਜਿਨਿਹਰਿਪ੍ਰਭਮਿਲਣਨਦਿਤੀਆ॥",
+    time:"10:00",
+    link:"http://45.41.235.161/~daasstor/keertan/sdo/yt_mga/206%20MGA%20SDO%201171%2036%20A.m4a",
+    postNum:12,
+    keertani:"SDO Ji",
+  },
 ]
