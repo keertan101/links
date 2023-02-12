@@ -18,14 +18,14 @@ const DATA = [
   {
     pangti:"ਚੇਤਿਅਚੇਤਮੂੜਮਨਮੇਰੇਬਾਜੇਅਨਹਦਬਾਜਾ ॥",
     time:"26:20",
-    link:"http://sikhsoul.com/golden_khajana_files/mp3/Keertan/Bhai%20Mohinder%20Singh%20SDO/Gur%20Sathigur%20Vich%20Naavai%20Kee%20Vaddee%20Vaddiaaee%202.mp3?fbclid=PAAaZiB6Ht5AJWLtiYOty7oTo-ATTiHkqmBAPtRKH8Xqh5L3iiXqbpxmR7j7A",
+    link:"http://sikhsoul.com/golden_khajana_files/mp3/Keertan/Bhai%20Mohinder%20Singh%20SDO/Gur%20Sathigur%20Vich%20Naavai%20Kee%20Vaddee%20Vaddiaaee%202.mp3",
     postNum:3,
     keertani:"SDO Ji"
   },
   {
     pangti:"ਦਿਨੁਰਾਤੀਆਰਾਧਹੁਪਿਆਰੋਨਿਮਖਨਕੀਜੈਢੀਲਾ ॥",
     time:"1:09:20",
-    link:"http://45.41.235.161/~daasstor/keertan/sdo/yt2_moga/609%20%20%20MGA%20SDO%201571%20%20%20Kab%20Ko%20Dhalle%20Ghhagroo%20%20%20Rakab%20Ganj%20Delhi%20%201989%20%20JS-po9xf0MlYCU.m4a",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/sdo/yt_mga/609%20MGA%20SDO%201571%20Kab%20Ko%20Dhalle%20Ghhagroo%20Rakab%20Ganj%20Delhi%201989%20JS.m4a",
     postNum:4,
     keertani:"SDO Ji",
   },
@@ -67,7 +67,7 @@ const DATA = [
   {
     pangti:"ਸਾਬਰੁਸਿਦਕਿਸਹੀਦੁਭਰਮਭਉਖੋਵਣਾ।",
     time:"8:30",
-    link:"http://45.41.235.161/~daasstor/keertan/sdo/yt2_moga/702%20%20%20MGA%20SDO%201664%20%20%20Japat%20Raha%20Tera%20Nao%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2009%201962%20Chd%20%20%20%20%20Old%20Spool%20%20KS%20%2069-nlmUuqCCl3A.m4a",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/sdo/yt_mga/702%20MGA%20SDO%201664%20Japat%20Raha%20Tera%20Nao%2009%201962%20Chd%20Old%20Spool%20KS%2069.m4a",
     postNum:10,
     keertani:"SDO Ji",
   },
@@ -81,7 +81,7 @@ const DATA = [
   {
     pangti:"ਮਾਰੇਹਿਸੁਵੇਜਨਹਉਮੈਬਿਖਿਆਜਿਨਿਹਰਿਪ੍ਰਭਮਿਲਣਨਦਿਤੀਆ॥",
     time:"10:00",
-    link:"http://45.41.235.161/~daasstor/keertan/sdo/yt_mga/206%20MGA%20SDO%201171%2036%20A.m4a",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/sdo/yt_mga/206%20MGA%20SDO%201171%2036%20A.m4a",
     postNum:12,
     keertani:"SDO Ji",
   },
