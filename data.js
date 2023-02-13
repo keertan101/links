@@ -85,4 +85,11 @@ const DATA = [
     postNum:12,
     keertani:"SDO Ji",
   },
+  {
+    pangti:"ਆਠਪਹਰਜਿਨਿਖਸਮੁਧਿਆਇਆ॥",
+    time:"40:00",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/sdo/yt_mga/392%20MGA%20SDO%201357%20M%20109%20A%201%20Dhan%20So%20Vela%20Jit%20Mai%20Satgur%20Milyia.m4a",
+    postNum:13,
+    keertani:"SDO Ji",
+  },
 ]
