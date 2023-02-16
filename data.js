@@ -99,4 +99,11 @@ const DATA = [
     postNum:14,
     keertani:"SDO Ji",
   },
+  {
+    pangti:"ਰੂਪੀਭੁਖਨਉਤਰੈਜਾਂਦੇਖਾਂਤਾਂਭੁਖ॥",
+    time:"6:00",
+    link:"http://sikhsoul.com/golden_khajana_files/mp3/Keertan/Bhai%20Mohinder%20Singh%20SDO/Jaethae%20Ras%20Sareer%20Kae%20Thaethae%20Lagehi%20Dhukh.mp3",
+    postNum:15,
+    keertani:"SDO Ji",
+  },
 ]
