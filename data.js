@@ -106,4 +106,11 @@ const DATA = [
     postNum:15,
     keertani:"SDO Ji",
   },
+  {
+    pangti:"ਜਿਨੑਾਭੇਟਿਆਮੇਰਾਪੂਰਾਸਤਿਗੁਰੂਤਿਨਹਰਿਨਾਮੁਦ੍ਰਿੜਾਵੈਰਾਮਰਾਜੇ॥",
+    time:"55:00",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/dulla_ji/yt/D%20154%20MGA%20DULLA%20154%20Vaar%20Andar%20Sacha%20Neh%20Jaspal%20S%20Tabla%20JSUK%201981%20Ludhiana-7cMABf9suck.m4a",
+    postNum:16,
+    keertani:"Dulla Ji",
+  },
 ]
