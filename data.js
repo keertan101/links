@@ -92,4 +92,11 @@ const DATA = [
     postNum:13,
     keertani:"SDO Ji",
   },
+  {
+    pangti:"ਧੰਨੁਧੰਨੁਸੋਗੁਰਸਿਖੁਕਹੀਐਜੋਸਤਿਗੁਰਚਰਣੀਜਾਇਪਇਆ॥",
+    time:"4:13",
+    link:"http://sikhsoul.com/golden_khajana_files/mp3/Keertan/Bhai%20Mohinder%20Singh%20SDO/Jinaa%20Gurasikhaa%20Ko%20Har%20Santhusatt%20Hai.mp3",
+    postNum:14,
+    keertani:"SDO Ji",
+  },
 ]
