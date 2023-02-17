@@ -21,19 +21,22 @@
       margin-right: auto;
     }
 
-    #ascenOrdescenBtn{
+    #ascenOrdescenBtn {
       margin: 1em;
     }
 
-    #ascenOrdescenLable{
+    #ascenOrdescenLable {
       background-color: lightgray;
-      border-radius:1em;
-      padding:0.6em;
+      border-radius: 1em;
+      padding: 0.6em;
     }
 
-    #submitBtn {
+    #audioDiv {
       margin: 1em;
+      align-items: center;
+      text-align: center;
     }
+
   </style>
   <script type='text/javascript' src='./data.js'></script>
 </head>
@@ -41,17 +44,18 @@
 <body>
   <h1>All Links of Tracks Posted on <a href='https://www.instagram.com/keertan101'>Keertan101</a></h1>
 
-    <label for='pickKeertani'>Choose a Keertani:</label>
-    <select id='pickKeertani' onchange="displayData()">
-      <option value='all'>All</option>
-      <option value='SDO Ji'>Bhai Mohinder Singh Ji SDO</option>
-      <option value='Bhai Mehar Singh Ji'>Bhai Mehar Singh Ji</option>
-      <option value='Bhai Jasbir Singh Ji'>Bhai Jasbir Singh Ji</option>
-    </select>
+  <div id="audioDiv">
+    <!-- <audio style="display:block" controls></audio> -->
+  </div>
+
+  <label for='pickKeertani'>Choose a Keertani:</label>
+  <select id='pickKeertani' onchange="displayData()">
+    <option value='all'>All</option>
+  </select>
+
 
   <div id='ascenOrdescenBtn'>
-    <label id='ascenOrdescenLable' for='ascenOrdescen'>Ascending</label>
-    <input hidden='true' onclick='toggle_order()' type='checkbox' id='ascenOrdescen'> 
+    <button id='ascenOrdescenLable' onclick='toggle_order()' for='ascenOrdescen'>Descending</button>
   </div>
 
   <table>
@@ -69,21 +73,21 @@
 
   <script>
     const tbody = document.getElementById('putData');
-    let theOrder = 'ascen'
+    let theOrder = 'descen'
 
     function displayData() {
       tbody.innerHTML = ''; //remove anychildern
-      let theData = theOrder=='ascen'? DATA : [...DATA].reverse()
+      let theData = theOrder == 'ascen' ? DATA : [...DATA].reverse()
 
       const opt = document.getElementById('pickKeertani').value
-      theData = theData.filter((item)=>{
-        if( opt == "all" ){
+      theData = theData.filter((item) => {
+        if (opt == "all") {
           return item
-        }else if( opt == item.keertani){
+        } else if (opt == item.keertani) {
           return item
         }
       })
-      
+
 
       for (let i = 0; i < theData.length; i++) {
         const {pangti, time, link, postNum, keertani, img} = theData[i]
@@ -110,19 +114,37 @@
       }
     }
 
-    function toggle_order(){
-      const label = document.getElementById('ascenOrdescenLable');
-      if (label.innerText == 'Ascending'){
+    function toggle_order() {
+      const btn = document.getElementById('ascenOrdescenLable');
+      if (btn.innerText == 'Ascending') {
         theOrder = 'descen'
         displayData()
-        label.innerText='Descending'
-      }else if(label.innerText == 'Descending'){
+        btn.innerText = 'Descending'
+      } else if (btn.innerText == 'Descending') {
         theOrder = 'ascen'
         displayData()
-        label.innerText='Ascending'
+        btn.innerText = 'Ascending'
       }
     }
 
+    function putOptions() {
+      const allKeertanis = []
+      DATA.forEach((track) => {
+        if (!allKeertanis.includes(track.keertani)) {
+          allKeertanis.push(track.keertani)
+        }
+      })
+
+      const select = document.getElementById('pickKeertani')
+      for (const keertani of allKeertanis) {
+        const opt = document.createElement('option')
+        opt.setAttribute('value', keertani)
+        opt.innerText = keertani
+        select.appendChild(opt)
+      }
+    }
+
+    putOptions()
     displayData()
   </script>
 </body>
