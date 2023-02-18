@@ -113,4 +113,11 @@ const DATA = [
     postNum:16,
     keertani:"Dulla Ji",
   },
+  {
+    pangti:"ਗੁਰਮਿਲਿਜੀਤਾਹਰਿਹਰਿਕੀਤਾਤੂਟੀਭੀਤਾਭਰਮਗੜਾ ॥",
+    time:"48:30",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/dulla_ji/sc/nirbankeertan/Sae%20gurasikh%20dhhan%20dhhan%20hai%20(Dulla%20Ji).mp3",
+    postNum:17,
+    keertani:"Dulla Ji",
+  },
 ]
