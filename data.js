@@ -120,4 +120,11 @@ const DATA = [
     postNum:17,
     keertani:"Dulla Ji",
   },
+  {
+    pangti:"ਸਾਧੋਗੋਬਿੰਦਕੇਗੁਨਗਾਵਉ॥",
+    time:"22:45",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/dulla_ji/sc/akjorg/ahinis%20bhagat%20kare%20din%20raatee%20laaj%20chhodd%20har%20ke%20gun%20gaavai%20(Dulla%20Ji).mp3",
+    postNum:18,
+    keertani:"Dulla Ji",
+  },
 ]
