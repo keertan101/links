@@ -127,4 +127,11 @@ const DATA = [
     postNum:18,
     keertani:"Dulla Ji",
   },
+  {
+    pangti:"ਰਜਿਰਜਿਭੋਜਨੁਖਾਵਹੁਮੇਰੇਭਾਈ॥",
+    time:"12:30",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/sdo/yt_mga/255%20MGA%20SDO%201220%2061%20A.m4a",
+    postNum:19,
+    keertani:"SDO Ji",
+  },
 ]
