@@ -134,4 +134,11 @@ const DATA = [
     postNum:19,
     keertani:"SDO Ji",
   },
+  {
+    pangti:"ਗੋਪਾਲਤੇਰਾਆਰਤਾ॥",
+    time:"5:30",
+    link:"http://sikhsoul.com/golden_khajana_files/mp3/Keertan/Bhai%20Mehar%20Singh/Bhai%20Mehar%20Singh%20-%20Gopaal%20thaeraa%20aarathaa.mp3",
+    postNum:20,
+    keertani:"Bhai Mehar Singh Ji",
+  },
 ]
