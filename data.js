@@ -1,5 +1,3 @@
-
-// pangti, timestamp, link
 const DATA = [
   {
     pangti:"ਮਾਈਚਰਨਗੁਰਮੀਠੇ ॥",
