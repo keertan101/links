@@ -120,4 +120,32 @@ const DATA = [
     postNum:17,
     keertani:"Dulla Ji",
   },
+  {
+    pangti:"ਸਾਧੋਗੋਬਿੰਦਕੇਗੁਨਗਾਵਉ॥",
+    time:"22:45",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/dulla_ji/sc/akjorg/ahinis%20bhagat%20kare%20din%20raatee%20laaj%20chhodd%20har%20ke%20gun%20gaavai%20(Dulla%20Ji).mp3",
+    postNum:18,
+    keertani:"Dulla Ji",
+  },
+  {
+    pangti:"ਰਜਿਰਜਿਭੋਜਨੁਖਾਵਹੁਮੇਰੇਭਾਈ॥",
+    time:"12:30",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/sdo/yt_mga/255%20MGA%20SDO%201220%2061%20A.m4a",
+    postNum:19,
+    keertani:"SDO Ji",
+  },
+  {
+    pangti:"ਗੋਪਾਲਤੇਰਾਆਰਤਾ॥",
+    time:"5:30",
+    link:"http://sikhsoul.com/golden_khajana_files/mp3/Keertan/Bhai%20Mehar%20Singh/Bhai%20Mehar%20Singh%20-%20Gopaal%20thaeraa%20aarathaa.mp3",
+    postNum:20,
+    keertani:"Bhai Mehar Singh Ji",
+  },
+  {
+    pangti:"ਗਿਆਨਧਿਆਨਮਾਨਦਾਨਮਨਰਸਿਕਰਸਨਨਾਮੁਜਪਤਤਹਪਾਪਖੰਡਲੀ॥੧॥",
+    time:"9:21",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/sdo/yt_mga/691%20MGA%20SDO%201653%20Bhagat%20Sohey%20Gun%20Gaavdey%2003%201974%20Moga%20SPOOL%20BS%2017%2058.m4a",
+    postNum:21,
+    keertani:"SDO Ji",
+  },
 ]
