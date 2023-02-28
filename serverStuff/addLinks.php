@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 //var_dump($_POST);
 //echo "</pre>";
 
-function addToCsv(){
+function addToCsvFromPostRequest(){
   $timestamp = "";
   if(!empty($_POST["hours"])){
     $timestamp = str_pad($_POST["hours"], 2, "0", STR_PAD_LEFT);
