@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link and Timestamp Form</title>
+  <style>
+    form {
+      /* width: 50%; */
+      padding: 20px;
+      border: 5px solid #ddd;
+      border-radius: 10px;
+      background-color: #f7f7f7;
+      box-shadow: 0px 0px 10px #ddd;
+      font-family: Arial, sans-serif;
+    }
+
+    input[type=text],
+    input[type=datetime-local] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px #ddd;
+      font-size: 16px;
+    }
+
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type=submit]:hover {
+      background-color: #3e8e41;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .userInputItem {
+      text-align: center;
+      align-items: center;
+      background-color: #0077be;
+      border-radius: 10px;
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .timeEnter {
+      margin: 1em;
+    }
+
+    #timeLabels {
+      display: flex;
+    }
+
+    .timeLabel {
+      margin: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello Harkamal Singh. Enter link for
+    <a href="https://keertan101.github.io/links/">Keertan101 website</a>
+  </h1>
+  <form action="http://45.76.2.28/keertan101Links/serverStuff/addLinks.php" method='post'>
+    <label for="link">Link:</label>
+    <input type="text" id="link" name="link" required>
+
+    <label for="pangti">Pangti:</label>
+    <input type="text" id="pangti" name="pangti" required>
+
+    <div class="userInputItem">
+      <label for="userKeertani">Keertani:</label>
+      <select id='userPickKeertani' onchange="keertaniChanged()">
+        <option value='Add New'>Add New</option>
+      </select>
+      <input id="userKeertani" name="keertani" style="display:none" placeholder="SDO Ji"></input>
+    </div>
+
+    <div class="userInputItem">
+      <label for="userTimestamp">Timestamp of where Description Happened:</label>
+      <div id="userTimestamp">
+        <input class="timeEnter" name="hours" id="hours" type="number" min="0" max="59" inputmode="numeric"></input>:
+        <input class="timeEnter" name="mins" id="mins" type="number" min="0" max="59" inputmode="numeric"></input>:
+        <input class="timeEnter" name="secs" id="secs" type="number" min="0" max="59" inputmode="numeric"></input>
+      </div>
+      <div id="timeLabels">
+        <label class="timeLabel" for="hours">hours:</label>
+        <label class="timeLabel" for="mins">minutes:</label>
+        <label class="timeLabel" for="secs">seconds</label>
+      </div>
+    </div>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+<script type='text/javascript' src='../data.js'></script>
+<script>
+  function keertaniChanged() {
+    const opt = document.getElementById('userPickKeertani').value
+    const inputKeertani = document.getElementById('userKeertani')
+    if (opt === "Add New") {
+      inputKeertani.style.display = "block";
+    } else {
+      inputKeertani.style.display = "none";
+      inputKeertani.value = opt
+    }
+  }
+
+  function putOptions() {
+    const allKeertanis = []
+    DATA.forEach((track) => {
+      if (!allKeertanis.includes(track.keertani)) {
+        allKeertanis.push(track.keertani)
+      }
+    })
+
+    const select = document.getElementById('userPickKeertani')
+    for (const keertani of allKeertanis) {
+      const opt = document.createElement('option')
+      opt.setAttribute('value', keertani)
+      opt.innerText = keertani
+      select.appendChild(opt)
+    }
+  }
+
+  putOptions()
+  keertaniChanged()
+</script>
+
+</html>
