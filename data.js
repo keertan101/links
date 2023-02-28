@@ -141,4 +141,11 @@ const DATA = [
     postNum:20,
     keertani:"Bhai Mehar Singh Ji",
   },
+  {
+    pangti:"ਗਿਆਨਧਿਆਨਮਾਨਦਾਨਮਨਰਸਿਕਰਸਨਨਾਮੁਜਪਤਤਹਪਾਪਖੰਡਲੀ॥੧॥",
+    time:"9:21",
+    link:"http://45.41.235.33/~daassto1/audios/keertan/sdo/yt_mga/691%20MGA%20SDO%201653%20Bhagat%20Sohey%20Gun%20Gaavdey%2003%201974%20Moga%20SPOOL%20BS%2017%2058.m4a",
+    postNum:21,
+    keertani:"SDO Ji",
+  },
 ]
