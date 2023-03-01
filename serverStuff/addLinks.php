@@ -38,33 +38,10 @@ function addToCsvFromPostRequest(){
   $fp = fopen("./rawData.csv", "a");
   fputcsv($fp, $line); # $line is an array of strings (array|string[])
   fclose($fp);
-  echo "The Data has been added to the csv file(database)";
-}
-
-function makeDataToJs($file){
-  $objLst = array();
-  $postNum = 0;
-  if (($handle = fopen($file, "r")) !== FALSE) {
-    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-      $postNum+=1;
-      $obj['pangti']=$data[0];
-      $obj['time']=$data[1];
-      $obj['link']=$data[2];
-      $obj['postNum']=$postNum;
-      $obj['keertani']=$data[3];
-      array_push($objLst,$obj);
-    }
-    fclose($handle);
-  }
-  return json_encode($objLst);
 }
 
 addToCsvFromPostRequest();
-$jsObj = makeDataToJs("./rawData.csv");
-$myFile = fopen("./data.js", "w");
-fwrite($myFile,"const DATA = ");
-fwrite($myFile,$jsObj);
-echo "Made Js Obj";
+echo "The Data has been added to the csv file(database)";
 
-//header("Location: ./data.js");
+header("Location: ../index.html");
 ?>
