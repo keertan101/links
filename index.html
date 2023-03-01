@@ -70,11 +70,12 @@
   </table>
 </body>
 
-serverStuff/addLinks.php
-<script type='text/javascript' src='http://45.76.2.28/keertan101Links/serverStuff/data.js'></script>
+
+<!-- <script type='text/javascript' src='http://45.76.2.28/keertan101Links/serverStuff/data.js'></script> -->
 <script>
   const tbody = document.getElementById('putData');
   let theOrder = 'descen'
+  const DATA = []
 
   function displayData() {
     tbody.innerHTML = ''; //remove anychildern
@@ -145,8 +146,19 @@ serverStuff/addLinks.php
     }
   }
 
-  putOptions()
-  displayData()
+  fetch("http://45.76.2.28/keertan101Links/serverStuff/getLinks.php").then((res) => {
+    if (!res.ok) throw new Error("Something went wrong!");
+    return res.json()
+  }).then((data) => {
+    for (const obj of data) {
+      DATA.push(obj)
+    }
+    displayData();
+    putOptions()
+  }).catch((err) => {
+    console.log(err)
+  })
+
 </script>
 
 </html>
