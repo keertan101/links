@@ -93,15 +93,15 @@
       <select id='userPickKeertani' onchange="keertaniChanged()">
         <option value='Add New'>Add New</option>
       </select>
-      <input id="userKeertani" name="keertani" style="display:none" placeholder="SDO Ji"></input>
+      <input id="userKeertani" name="keertani" style="display:none" placeholder="SDO Ji" required>
     </div>
 
     <div class="userInputItem">
       <label for="userTimestamp">Timestamp of where Description Happened:</label>
       <div id="userTimestamp">
-        <input class="timeEnter" name="hours" id="hours" type="number" min="0" max="59" inputmode="numeric"></input>:
-        <input class="timeEnter" name="mins" id="mins" type="number" min="0" max="59" inputmode="numeric"></input>:
-        <input class="timeEnter" name="secs" id="secs" type="number" min="0" max="59" inputmode="numeric"></input>
+        <input class="timeEnter" name="hours" id="hours" type="number" min="0" max="59" inputmode="numeric">:
+        <input class="timeEnter" name="mins" id="mins" type="number" min="0" max="59" inputmode="numeric">:
+        <input class="timeEnter" name="secs" id="secs" type="number" min="0" max="59" inputmode="numeric">
       </div>
       <div id="timeLabels">
         <label class="timeLabel" for="hours">hours:</label>
