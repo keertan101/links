@@ -96,7 +96,9 @@
   <!-- <script type="text/javascript" src="./data.js"></script> -->
   <script>
     const tbody = document.getElementById('putData')
+    const theAudioPlayer = document.getElementsByTagName('audio')[0]
     let theOrder = 'descen'
+    let currentTrackIndex = 0
     const DATA = []
 
     function displayData() {
@@ -139,6 +141,7 @@
     }
 
     function playTrack(index) {
+      currentTrackIndex = index
       const audioContent = document.getElementById('audioContent')
       audioContent.style.display = 'block'
 
@@ -160,6 +163,14 @@
           muliplier *= 60
         }
         document.getElementsByTagName('audio')[0].currentTime = totalSeconds
+      }
+
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: `${index + 1}) ${DATA[index].pangti}`,
+          artist: DATA[index].keertani,
+          album: 'Keertan101',
+        })
       }
     }
 
@@ -193,6 +204,40 @@
       }
     }
 
+    function navigatorStuff() {
+      navigator.mediaSession.setActionHandler('play', () =>
+        theAudioPlayer.play()
+      )
+      navigator.mediaSession.setActionHandler('pause', () =>
+        theAudioPlayer.pause()
+      )
+
+      navigator.mediaSession.setActionHandler(
+        'seekforward',
+        () => (theAudioPlayer.currentTime += 10)
+      )
+      navigator.mediaSession.setActionHandler(
+        'seekbackward',
+        () => (theAudioPlayer.currentTime += -10)
+      )
+
+      navigator.mediaSession.setActionHandler('previoustrack', () => {
+        let newInd = currentTrackIndex - 1
+        if (newInd < 0) newInd = DATA.length - 1
+        playTrack(newInd)
+      })
+
+      navigator.mediaSession.setActionHandler('nexttrack', () => {
+        let newInd = currentTrackIndex + 1
+        if (newInd === DATA.length) newInd = 0
+        playTrack(newInd)
+      })
+
+      navigator.mediaSession.setActionHandler('seekto', function (event) {
+        theAudioPlayer.currentTime = event.seekTime
+      })
+    }
+
     function getNameOfTrack(link) {
       return decodeURIComponent(link.split('/').slice(-1)[0])
     }
@@ -209,6 +254,7 @@
         console.log(DATA[0])
         displayData()
         putOptions()
+        navigatorStuff()
       })
       .catch((err) => {
         console.log(err)
